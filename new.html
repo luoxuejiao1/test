@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin:auto;
+        padding: 0;
+    }
+    ul,ol,li{
+        list-style: none;
+    }
+    .waikuang{
+        width: 1300px;
+        height: 150px;
+        border: 1px solid #0C0C0C;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .biaoti{
+        height: 130px;
+        overflow: hidden;
+        float: left;
+    }
+    .biaoti>ul{
+        margin: 0;
+        width: 1200px;
+        height: 260px;
+        overflow: hidden;
+    }
+    .biaoti>ul>li{
+        float: left;
+        width: 300px;
+        height: 130px;
+        background: #999;
+        text-align: center;
+        line-height: 130px;
+        font-size: 30px;
+        color: white;
+    }
+    .biaoti>ul>.active{
+        background: #333;
+    }
+    .anniu{
+        float: left;
+        width: 50px;
+        height: 100px;
+        /*border: 1px solid #0C0C0C;*/
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .btn{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        outline: none;
+    }
+</style>
+
+<body>
+
+
+<div class="waikuang">
+    <div class="biaoti">
+        <ul id="navUl" class="navUl">
+            <li class="active">系统管理</li>
+            <li>组织管理</li>
+            <li>供应商管理</li>
+            <li>采购管理</li>
+            <li>数据库</li>
+            <li>台词管理</li>
+            <li>更多管理</li>
+        </ul>
+    </div>
+    
+    <div class="anniu">
+        <button type="button" id="turnUp" class="btn">上移</button>
+        <button type="button" id="turnDown" value="123" disabled class="btn">下移</button>
+    </div>
+</div>
+
+<div>
+<h1>h1的文字显示</h1>
+<h2>h2的文字显示</h2>
+<h3>h3的文字显示</h3>
+<h4>h4的文字显示</h4>
+<h5>h5的文字显示</h5>
+<h6>h6的文字显示</h6>
+</div>
+
+<img src="holder.js/500x500" />
+
+<script src="holder.js"></script>
+<script>
+    {
+        let turnUp = document.getElementById("turnUp");
+        let turnDown = document.getElementById("turnDown");
+        let navUl = document.getElementById("navUl");
+        let lis = navUl.children;
+
+        /* 找所有的兄弟节点的函数 */
+        let findSiblings = function( tag ){
+            let  child = tag.parentNode.children ; // 找到所有的 子标签，包括 tag
+            let  siblings = [] ; // 空数组，存放兄弟们
+            for( let i=0 ; i <= child.length - 1 ; i++){
+                if(  child[i] === tag ){
+                    continue;
+                }
+                siblings.push( child[i] ); // 把兄弟放入数组中。给数组添加元素
+            }
+            return siblings ; // 返回兄弟节点
+        };
+
+        // 去掉兄弟标签的指定类
+        let removeSiblingClass = function( tag , classN ){
+            let siblings = findSiblings(tag);
+            for( let i = 0 ; i <= siblings.length-1 ; i++ ){
+                siblings[i].classList.remove( classN );
+            }
+        };
+
+
+        for( let i =0 ; i<= lis.length-1 ; i++){
+            lis[i].addEventListener("mouseenter",function(){
+                lis[i].classList.add("active");
+                removeSiblingClass( lis[i] , "active" );
+            });
+        }
+
+        turnUp.addEventListener("click",function(){
+            navUl.style.transform = "translateY(-130px)";
+            navUl.style.transition = "0.5s";
+            turnDown.disabled = false;
+            turnUp.disabled = true;
+
+        });
+        turnDown.addEventListener("click",function(){
+            navUl.style.transform = "translateY(0)";
+            navUl.style.transition = "0.5s";
+            turnUp.disabled = false;
+            turnDown.disabled = true;
+
+        });
+
+
+    }
+</script>
+
+
+
+
+</body>
+</html>
