@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="mylayui/layui/css/layui.css">
+</head>
+<style>
+    .site-doc-icon{margin-bottom: 50px; font-size: 0;}
+    .site-doc-icon li{display: inline-block; vertical-align: middle; width: 127px; height: 105px; line-height: 25px; padding: 20px 0; margin-right: -1px; margin-bottom: -1px; border: 1px solid #e2e2e2; font-size: 14px; text-align: center; color: #666; transition: all .3s; -webkit-transition: all .3s;}
+    .site-doc-anim li{height: auto;}
+    .site-doc-icon li .layui-icon{display: inline-block; font-size: 36px;}
+
+    .site-doc-icon li .doc-icon-name,
+    .site-doc-icon li .doc-icon-code{color: #c2c2c2;}
+    .site-doc-icon li .doc-icon-fontclass{height: 40px; line-height: 20px; padding: 0 5px; font-size: 13px; color: #333; }
+    .site-doc-icon li:hover{background-color: #f2f2f2; color: #000;}
+
+</style>
+<style>
+    .site-doc-icon li{width: 222px;}
+    .site-doc-icon li .layui-anim{width: 150px; height: 150px; line-height: 150px; margin: 0 auto 10px; text-align: center; background-color: #009688; cursor: pointer; color: #fff; border-radius: 50%;}
+</style>
+<body>
+
+<!-- 图标 -->
+<div class="layui-icon">&#xe68f;</div>
+<div class="layui-icon layui-icon-heart"></div>
+<!-- 图标 end -->
+
+<!-- 按钮 -->
+<div>
+    <button  type="button" class="layui-btn layui-btn-primary">原始按钮</button>
+    <button  type="button" class="layui-btn">默认按钮</button>
+    <button  type="button" class="layui-btn layui-abtn-normal">百搭按钮</button>
+    <button  type="button" class="layui-btn layui-btn-warm">暖色按钮</button>
+    <button  type="button" class="layui-btn layui-btn-danger">警告按钮</button>
+    <button  type="button" class="layui-btn layui-btn-disabled">禁用按钮</button>
+</div>
+<div>
+    <a  type="button" class="layui-btn layui-btn-primary">原始按钮</a>
+    <a  type="button" class="layui-btn">默认按钮</a>
+    <a  type="button" class="layui-btn layui-abtn-normal">百搭按钮</a>
+    <a  type="button" class="layui-btn layui-btn-warm">暖色按钮</a>
+    <a  type="button" class="layui-btn layui-btn-danger">警告按钮</a>
+    <a  type="button" class="layui-btn layui-btn-disabled">禁用按钮</a>
+</div>
+<div>
+    <span  type="button" class="layui-btn layui-btn-primary">原始按钮</span>
+    <span  type="button" class="layui-btn">默认按钮</span>
+    <span  type="button" class="layui-btn layui-abtn-normal">百搭按钮</span>
+    <span  type="button" class="layui-btn layui-btn-warm">暖色按钮</span>
+    <span  type="button" class="layui-btn layui-btn-danger">警告按钮</span>
+    <span  type="button" class="layui-btn layui-btn-disabled">禁用按钮</span>
+</div>
+<div>
+    <input type="button" class="layui-btn layui-btn-primary" value="原始按钮">
+    <input  type="button" class="layui-btn" value="默认按钮">
+    <input  type="button" class="layui-btn layui-abtn-normal" value="百搭按钮">
+    <input  type="button" class="layui-btn layui-btn-warm" value="暖色按钮">
+    <input  type="button" class="layui-btn layui-btn-danger" value="警告按钮">
+    <input  type="button" class="layui-btn layui-btn-disabled" value="禁用按钮">
+</div>
+
+
+<div>
+    <button type="button" class="layui-btn layui-btn-lg">大型按钮</button>
+    <button type="button" class="layui-btn">默认按钮</button>
+    <button type="button" class="layui-btn layui-btn-sm">小型按钮</button>
+    <button type="button" class="layui-btn layui-btn-xs">迷你按钮</button>
+</div>
+
+<div>
+    <button type="button" class="layui-btn layui-abtn-normal layui-icon layui-icon-praise"></button>
+    <button type="button" class="layui-btn layui-abtn-normal layui-icon layui-icon-cellphone-fine">手机按钮</button>
+    <button type="button" class="layui-btn layui-abtn-normal">
+        <span class="layui-icon">&#xe63b;</span>手机按钮
+    </button>
+</div>
+
+<div>
+    <button type="button" class="layui-btn layui-btn-radius layui-btn-primary">原始按钮</button>
+    <button type="button" class="layui-btn layui-btn-radius">默认按钮</button>
+    <button type="button" class="layui-btn layui-btn-radius layui-abtn-normal">百搭按钮</button>
+    <button type="button" class="layui-btn layui-btn-radius layui-btn-warm">暖色按钮</button>
+    <button type="button" class="layui-btn layui-btn-radius layui-btn-danger">警告按钮</button>
+    <button type="button" class="layui-btn layui-btn-radius layui-btn-disabled">禁用按钮</button>
+</div>
+
+<div class="layui-btn-group">
+    <button type="button" class="layui-btn">增加</button>
+    <button type="button" class="layui-btn">编辑</button>
+    <button type="button" class="layui-btn">删除</button>
+</div>
+<div class="layui-btn-group">
+    <button type="button" class="layui-btn layui-btn-sm">
+        <i class="layui-icon">&#xe654;</i>
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm">
+        <i class="layui-icon">&#xe642;</i>
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm">
+        <i class="layui-icon">&#xe640;</i>
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm">
+        <i class="layui-icon">&#xe602;</i>
+    </button>
+</div>
+<div class="layui-btn-group">
+    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+        <i class="layui-icon">&#xe654;</i>
+    </button>
+    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+        <i class="layui-icon">&#xe642;</i>
+    </button>
+    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+        <i class="layui-icon">&#xe640;</i>
+    </button>
+</div>
+
+<!-- 按钮 end -->
+
+<!-- 导航 -->
+<ul class="layui-nav" lay-filter="">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">社区</a></li>
+</ul>
+
+<ul class="layui-nav layui-nav-tree" lay-filter="">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">社区</a></li>
+</ul>
+
+<ul class="layui-nav">
+    <li class="layui-nav-item">
+        <a href="">控制台<span class="layui-badge">9</span></a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="">个人中心<span class="layui-badge-dot"></span></a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="javascript:void (0);"><img src="http://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">我</a>
+        <dl class="layui-nav-child">
+            <dd><a href="javascript:;">修改信息</a></dd>
+            <dd><a href="javascript:;">安全管理</a></dd>
+            <dd><a href="javascript:;">退了</a></dd>
+        </dl>
+    </li>
+</ul>
+<!-- 导航 end -->
+
+<!-- 选项卡 -->
+<div class="layui-tab layui-tab-card" lay-filter="demo" lay-allowclose="true">
+    <ul class="layui-tab-title">
+        <li lay-id="1" class="layui-this myTab">网站设置</li>
+        <li lay-id="2" class="myTab">用户管理</li>
+        <li lay-id="3" class="myTab">权限分配</li>
+        <li lay-id="4" class="myTab">商品管理</li>
+        <li lay-id="5" class="myTab">订单管理</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            1. 高度默认自适应，也可以随意固宽。<br>
+            2. Tab进行了响应式处理，所以无需担心数量多少。
+        </div>
+        <div class="layui-tab-item">内容2</div>
+        <div class="layui-tab-item">内容3</div>
+        <div class="layui-tab-item">内容4</div>
+        <div class="layui-tab-item">内容5</div>
+    </div>
+</div>
+<div class="layui-btn-group">
+    <button type="button" class="layui-btn" id="add">增加一个tab</button>
+    <button type="button" class="layui-btn" id="change">切换用户管理</button>
+    <button type="button" class="layui-btn" id="del">删除订单管理</button>
+    <button type="button" class="layui-btn" id="delAll">删除所有tab</button>
+</div>
+<!-- 选项卡 end -->
+<br>
+<!-- 进度条 -->
+<div class="layui-progress layui-progress-big" lay-showpercent="true">
+    <div class="layui-progress-bar" lay-percent="40%"></div>
+</div>
+<br>
+<div class="layui-progress" lay-showpercent="true">
+    <div class="layui-progress-bar" lay-percent="2/5"></div>
+</div>
+<div style="margin-top: 15px; width:300px">
+    <div class="layui-progress" >
+        <div class="layui-progress-bar" lay-percent="70%"></div>
+    </div>
+</div>
+<br>
+<div class="layui-progress">
+    <div class="layui-progress-bar layui-bg-red" lay-percent="20%"></div>
+</div>
+
+<br>
+
+<div class="layui-progress">
+    <div class="layui-progress-bar layui-bg-orange" lay-percent="30%"></div>
+</div>
+
+<br>
+
+<div class="layui-progress">
+    <div class="layui-progress-bar layui-bg-green" lay-percent="40%"></div>
+</div>
+
+<br>
+
+<div class="layui-progress">
+    <div class="layui-progress-bar layui-bg-blue" lay-percent="50%"></div>
+</div>
+
+<br>
+
+<div class="layui-progress">
+    <div class="layui-progress-bar layui-bg-cyan" lay-percent="60%"></div>
+</div>
+<br>
+<!-- 进度条 end -->
+
+<!-- 面板 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>卡片面板</legend>
+</fieldset>
+
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">卡片面板</div>
+                <div class="layui-card-body">
+                    卡片式面板面板通常用于非白色背景色的主体内<br>
+                    从而映衬出边框投影
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">卡片面板</div>
+                <div class="layui-card-body">
+                    结合 layui 的栅格系统<br>
+                    轻松实现响应式布局
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">标题</div>
+                <div class="layui-card-body">
+                    内容
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>常规折叠面板</legend>
+</fieldset>
+<div class="layui-collapse" lay-filter="test" lay-accordion="">
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">为什么JS社区大量采用未发布或者未广泛支持的语言特性？</h2>
+        <div class="layui-colla-content layui-show">
+            <p>有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">为什么前端工程师多不愿意用 Bootstrap 框架？</h2>
+        <div class="layui-colla-content">
+            <p>因为不适合。如果希望开发长期的项目或者制作产品类网站，那么就需要实现特定的设计，为了在维护项目中可以方便地按设计师要求快速修改样式，肯定会逐步编写出各种业务组件、工具类，相当于为项目自行开发一套框架。——来自知乎@Kayo</p>
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">layui 更适合哪些开发者？</h2>
+        <div class="layui-colla-content">
+            <p>在前端技术快速变革的今天，layui 仍然坚持语义化的组织模式，甚至于模块理念都是采用类AMD组织形式，并非是有意与时代背道而驰。layui 认为以jQuery为核心的开发方式还没有到完全消亡的时候，而早期市面上基于jQuery的UI都普通做得差强人意，所以需要有一个新的UI去重新为这一领域注入活力，并采用一些更科学的架构方式。
+                <br><br>
+                因此准确地说，layui 更多是面向那些追求开发简单的前端工程师们，以及所有层次的服务端程序员。</p>
+        </div>
+    </div>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">贤心是男是女？</h2>
+        <div class="layui-colla-content">
+            <p>man！ 所以这个问题不要再出现了。。。</p>
+        </div>
+    </div>
+</div>
+<!-- 面板 end -->
+
+<!-- 布局 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>始终等比例水平排列</legend>
+</fieldset>
+
+<div class="layui-row">
+    <div class="layui-col-xs6">
+        <div class="">6/12</div>
+    </div>
+    <div class="layui-col-xs6">
+        <div class="">6/12</div>
+    </div>
+</div>
+<div class="layui-row">
+    <div class="layui-col-xs3">
+        <div class="">3/12</div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="">3/12</div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="">3/12</div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="">3/12</div>
+    </div>
+</div>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>移动设备、桌面端的组合响应式展现</legend>
+</fieldset>
+
+<div class="layui-row">
+    <div class="layui-col-xs12 layui-col-md8">
+        <div class="">移动：12/12、桌面：8/12</div>
+    </div>
+    <div class="layui-col-xs6 layui-col-md4">
+        <div class="">移动：6/12、桌面：4/12</div>
+    </div>
+    <div class="layui-col-xs6 layui-col-md12">
+        <div class="">移动：6/12、桌面：12/12</div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>移动设备、平板、桌面端的复杂组合响应式展现</legend>
+</fieldset>
+
+<div class="layui-row">
+    <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+        <div class="grid-demo grid-demo-bg1">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+    </div>
+    <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+            <div class="grid-demo layui-bg-red">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+    </div>
+    <div class="layui-col-xs4 layui-col-sm12 layui-col-md4">
+        <div class="grid-demo layui-bg-blue">移动：4/12 | 平板：12/12 | 桌面：4/12</div>
+    </div>
+    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
+        <div class="grid-demo layui-bg-green">移动：4/12 | 平板：7/12 | 桌面：8/12</div>
+    </div>
+    <div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+        <div class="grid-demo layui-bg-black">移动：4/12 | 平板：5/12 | 桌面：4/12</div>
+    </div>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>列间隔</legend>
+</fieldset>
+
+<div class="layui-row layui-col-space2" style="height: 50px;margin: 0">
+    <div class="layui-col-md4" >
+        <div class="layui-bg-green" style="height: 50px">1/4</div>
+    </div>
+    <!--<div class="layui-col-md4" style="height: 50px">-->
+        <!--<div class="layui-bg-green" style="height: 50px">1/4</div>-->
+    <!--</div>-->
+    <div class="layui-col-md4 layui-col-lg-offset4" style="height: 50px">
+        <div class="layui-bg-green" style="height: 50px">1/4</div>
+    </div>
+</div>
+<!-- 布局 end -->
+
+<!-- 徽章 -->
+<span class="layui-badge-dot"></span>
+<span class="layui-badge-dot layui-bg-orange"></span>
+<span class="layui-badge-dot layui-bg-green"></span>
+<span class="layui-badge- dot layui-bg-cyan"></span>
+<span class="layui-badge-dot layui-bg-blue"></span>
+<span class="layui-badge-dot layui-bg-black"></span>
+<span class="layui-badge-dot layui-bg-gray"></span>
+
+<span class="layui-badge">6</span>
+<span class="layui-badge">99</span>
+<span class="layui-badge">61728</span>
+<span class="layui-badge">赤</span>
+<span class="layui-badge layui-bg-orange">橙</span>
+<span class="layui-badge layui-bg-green">绿</span>
+<span class="layui-badge layui-bg-cyan">青</span>
+<span class="layui-badge layui-bg-blue">蓝</span>
+<span class="layui-badge layui-bg-black">黑</span>
+<span class="layui-badge layui-bg-gray">灰</span>
+
+<span class="layui-badge-rim">6</span>
+<span class="layui-badge-rim">Hot</span>
+<!-- 徽章 end -->
+
+<!-- 时间线 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>常规时间线</legend>
+</fieldset>
+<ul class="layui-timeline">
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">8月18日</h3>
+            <p>
+                layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
+                <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon">&#xe650;</i>
+            </p>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">8月16日</h3>
+            <p>杜甫的思想核心是儒家的仁政思想，他有<em>“致君尧舜上，再使风俗淳”</em>的宏伟抱负。个人最爱的名篇有：</p>
+            <ul>
+                <li>《登高》</li>
+                <li>《茅屋为秋风所破歌》</li>
+            </ul>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">8月15日</h3>
+            <p>
+                中国人民抗日战争胜利日
+                <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
+                <br>铭记、感恩
+                <br>所有为中华民族浴血奋战的英雄将士
+                <br>永垂不朽
+            </p>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">过去</div>
+        </div>
+    </li>
+</ul>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>简约时间线：大事记</legend>
+</fieldset>
+<ul class="layui-timeline">
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe756;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">2018年，layui 5.0 发布。并发展成为中国最受欢迎的前端UI框架（期望）</div>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">2017年，layui 里程碑版本 2.0 发布</div>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">2016年，layui 首个版本发布</div>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">2015年，layui 孵化</div>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis">&#xe63e;</i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">更久前，轮子时代。维护几个独立组件：layer等</div>
+        </div>
+    </li>
+</ul>
+<!-- 时间线 end -->
+
+
+
+<!-- 动画 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>动画</legend>
+</fieldset>
+<ul class="site-doc-icon site-doc-anim">
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-up">从最底部往上滑入</div>
+        <div class="code">layui-anim-up</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-upbit">微微往上滑入</div>
+        <div class="code">layui-anim-upbit</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-scale">平滑放大</div>
+        <div class="code">layui-anim-scale</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-scaleSpring">弹簧式放大</div>
+        <div class="code">layui-anim-scaleSpring</div>
+    </li>
+</ul>
+<ul class="site-doc-icon site-doc-anim">
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-fadein">渐现</div>
+        <div class="code">layui-anim-fadein</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-fadeout">渐隐</div>
+        <div class="code">layui-anim-fadeout</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-rotate">360度旋转</div>
+        <div class="code">layui-anim-rotate</div>
+    </li>
+    <li>
+        <div class="layui-anim" data-anim="layui-anim-rotate layui-anim-loop">循环动画</div>
+        <div class="code">追加：layui-anim-loop</div>
+    </li>
+</ul>
+<!-- 动画 end -->
+
+<!-- 表单 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>表单使用</legend>
+</fieldset>
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">单行输入框</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题 text" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">验证必填项</label>
+        <div class="layui-input-block">
+            <input type="text" name="username" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？" placeholder="请输入 text" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">验证手机</label>
+            <div class="layui-input-inline">
+                <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" placeholder="请输入手机号码 tel" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">验证邮箱</label>
+            <div class="layui-input-inline">
+                <input type="email" name="email" lay-verify="required|phone" autocomplete="off" placeholder="请输入邮箱账号 email" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">多规则验证</label>
+            <div class="layui-input-inline">
+                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">验证日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">验证链接</label>
+            <div class="layui-input-inline">
+                <input type="tel" name="url" lay-verify="url" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">验证身份证</label>
+        <div class="layui-input-block">
+            <input type="text" name="identity" lay-verify="identity" placeholder="" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+</form>
+<!-- 表单 end -->
+
+
+<script src="mylayui/layui/layui.js"></script>
+<script>
+    layui.use(["jquery"],function () {
+        let $=layui.jquery;
+
+        //演示动画
+        $('.site-doc-icon .layui-anim').on('click', function(){
+            let othis = $(this), anim = othis.data('anim');
+
+            //停止循环
+            if(othis.hasClass('layui-anim-loop')){
+                return othis.removeClass(anim);
+            }
+
+            othis.removeClass(anim);
+
+            setTimeout(function(){
+                othis.addClass(anim);
+            });
+            //恢复渐隐
+            if(anim === 'layui-anim-fadeout'){
+                setTimeout(function(){
+                    othis.removeClass(anim);
+                }, 1300);
+            }
+        });
+    });
+    layui.use('element', function(){
+
+    });
+    layui.use(['element','jquery'],function(){
+        let $ = layui.jquery;
+        let element = layui.element;
+
+        $("#add").click(function(){
+            element.tabAdd('demo', {
+                title: '选项卡的标题'
+                ,content: '选项卡的内容' //支持传入html
+            });
+        });
+        $("#change").click(function(){
+            element.tabChange('demo', '2');
+        });
+        $("#del").click(function(){
+            element.tabDelete('demo', '5');
+        });
+        $("#delAll").click(function(){
+            let tabs = $(".myTab");
+            $.each(tabs,function (index , item) {   // index 数组索引 为循环变量  item 数组DOM对象 为循环项
+                let layid = item.getAttribute("lay-id");
+                element.tabDelete('demo', layid);
+            })
+        });
+
+        element.on('collapse(test)', function(data){
+            console.log(data.show); //得到当前面板的展开状态，true或者false
+            console.log(data.title); //得到当前点击面板的标题区域DOM对象
+            console.log(data.content); //得到当前点击面板的内容区域DOM对象
+        });
+    });
+</script>
+
+</body>
+</html>
